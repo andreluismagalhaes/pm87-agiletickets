@@ -121,4 +121,8 @@ public class Sessao {
 		return preco;
 	}
 	
+	public boolean estaQuaseLotada() {
+		return (getTotalIngressos() - getIngressosReservados()) / getTotalIngressos().doubleValue() <= getEspetaculo().getTipo().getIndiceLotacaoSobrepreco();
+	}
+	
 }
